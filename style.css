@@ -58,7 +58,8 @@ a {
 }
 
 a.button {
-    color: rgba(41,128,185, 0.6);
+    color: rgba(255,255,255, 0.7);
+	background:rgba(73,158,214,0.6);
     box-shadow: rgba(41,128,185, 0.4) 0 0px 0px 3px inset;
 }
 
