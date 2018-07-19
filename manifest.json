@@ -6,7 +6,10 @@
     "src": "icon.png",
     "sizes": "256x256"
   }],
-  "display": "standalone",
-  "start_url": "/",
-  "orientation": "landscape"
+  "orientation": "landscape",
+  "start_url": ".",
+"display": "standalone",
+"related_applications": [{
+    "platform": "web"
+}]
 }
