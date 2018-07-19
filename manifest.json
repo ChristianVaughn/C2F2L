@@ -9,8 +9,5 @@
   "orientation": "landscape",
   "start_url": "/",
     "scope": "/",
-"display": "standalone",
-"related_applications": [{
-    "platform": "web"
-}]
+"display": "standalone"
 }
