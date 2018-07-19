@@ -6,6 +6,7 @@
     "src": "icon.png",
     "sizes": "256x256"
   }],
-  "display": "fullscreen",
+  "display": "standalone",
+  "start_url": "index.html",
   "orientation": "landscape"
 }
