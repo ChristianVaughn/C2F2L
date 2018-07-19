@@ -19,33 +19,35 @@
     <link rel="manifest" href="manifest.json">
     <meta name="application-name" content="C2F2L">
     <link rel="icon" type="image/png" href="favicon.png">
+    <meta content=’width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0′ name=’viewport’ />
+	<meta name=”viewport” content=”width=device-width” />
     
 	</head>
-	<body onLoad="NewScramble();" >
+		<body onLoad="NewScramble();" >
 
-	<h1 class="title">Cross To F2L</h1>
-	<h2 class="ritle">A tool to practice cross and transition to F2L</h2>
+		<h1 class="title">Cross To F2L</h1>
+		<h2 class="ritle">A tool to practice cross and transition to F2L</h2>
 
-	<span class="custom-dropdown">		
-			<select ID="Level">
-				<option VALUE="1">Level 1 – Cross requires 1 move to solve </option>
-				<option VALUE="2">Level 2 – Cross requires 2 moves to solve </option>
-				<option VALUE="3">Level 3 – Cross requires 3 moves to solve </option>
-				<option VALUE="4">Level 4 – Cross requires 4 moves to solve </option>
-				<option VALUE="5">Level 5 – Cross requires 5 moves to solve </option>
-				<option VALUE="6">Level 6 – Cross requires 6 moves to solve </option>
-				<option VALUE="7">Level 7 – Cross requires 7 moves to solve </option>
-				<option VALUE="8">Level 8 – Cross requires 8 moves to solve </option>
-			</select>
-	</span> 
-			<div class="wrap">
-			 <a href="#" class="button" onClick="NewScramble();">Get Scramble</a>
-			</div>
-			<div class="outder">
-<div class="scramble" ID="Output" STYLE="font-family:Helvetica, Arial; font-size:30pt"></div>
-	</div>
+		<span class="custom-dropdown">		
+				<select ID="Level">
+					<option VALUE="1">Level 1 – Cross requires 1 move to solve </option>
+					<option VALUE="2">Level 2 – Cross requires 2 moves to solve </option>
+					<option VALUE="3">Level 3 – Cross requires 3 moves to solve </option>
+					<option VALUE="4">Level 4 – Cross requires 4 moves to solve </option>
+					<option VALUE="5">Level 5 – Cross requires 5 moves to solve </option>
+					<option VALUE="6">Level 6 – Cross requires 6 moves to solve </option>
+					<option VALUE="7">Level 7 – Cross requires 7 moves to solve </option>
+					<option VALUE="8">Level 8 – Cross requires 8 moves to solve </option>
+				</select>
+		</span> 
+				<div class="wrap">
+				 <a href="#" class="button" onClick="NewScramble();">Get Scramble</a>
+				</div>
+				<div class="outder">
+	<div class="scramble" ID="Output" STYLE="font-family:Helvetica, Arial; font-size:30pt"></div>
+		</div>
 
-	</body>
+		</body>
 	<script>
   if ('serviceWorker' in navigator) {
     console.log("Will the service worker register?");
