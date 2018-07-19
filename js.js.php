@@ -33,7 +33,7 @@ function NewScramble(z0) {
 			}
 
 			if (A == 0) {
-				OutputString = OutputString + '<TD WIDTH="124" BGCOLOR="#FFFFFF"><CENTER><IMAGE HEIGHT="124" SRC="http://cube.crider.co.uk/visualcube.php?fmt=png&?size=124&r=';
+				OutputString = OutputString + '<TD WIDTH="124" BGCOLOR="#FFFFFF"><CENTER><IMAGE HEIGHT="124" SRC="//icon.png';
 				if ("White" == "Yellow") {
 					OutputString = OutputString + 'y24x-24';
 				} else {
@@ -41,7 +41,7 @@ function NewScramble(z0) {
 				}
 				OutputString = OutputString + '&alg=">';
 			} else if (A == TextScrambleArray.length+1) {
-				OutputString = OutputString + '<TD WIDTH="124" BGCOLOR="#FFFFFF"><CENTER><IMAGE HEIGHT="124" SRC="http://cube.crider.co.uk/visualcube.php?fmt=png&?size=124&r=';
+				OutputString = OutputString + '<TD WIDTH="124" BGCOLOR="#FFFFFF"><CENTER><IMAGE HEIGHT="124" SRC="//icon.png';
 				if ("White" == "Yellow") {
 					OutputString = OutputString + 'y24x-24';
 				} else {
