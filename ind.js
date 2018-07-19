@@ -1,20 +1,12 @@
-/* JS for demo only */
-var colors = ['1abc9c', '2c3e50', '2980b9', '7f8c8d', 'f1c40f', 'd35400', '27ae60'];
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('worker.js');
+}
 
-colors.each(function (color) {
-  $$('.color-picker')[0].insert(
-    '<div class="square" style="background: #' + '2980b9' + '"></div>'
-  );
-});
+// link to a image file
+var iconUrl = 'https://www.seeklogo.net/wp-content/uploads/2014/10/Google-Chrome-logo-vector-download.png';
 
-$$('.color-picker')[0].on('click', '.square', function(event, square) {
-  background = square.getStyle('background');
-  $$('.custom-dropdown select').each(function (dropdown) {
-    dropdown.setStyle({'background' : background});
-  });
-});
-
-/*
- * Original version at
- * http://red-team-design.com/making-html-dropdowns-not-suck
- */
+// create the <img> html element
+// on first load it will request the image
+// second time it will load it from cache directly thanks to the service worker
+var imgElement = document.createElement('img');
+imgElement.src = iconUrl;
