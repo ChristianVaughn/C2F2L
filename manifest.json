@@ -5,7 +5,7 @@
   "icons": [{
     "src": "icon.png",
     "sizes": "256x256"
-  }]
+  }],
   "display": "fullscreen",
   "orientation": "landscape",
 }
