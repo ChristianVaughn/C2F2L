@@ -3,8 +3,8 @@ body {
    font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 14px;
-	color: #fff;
-  background: #1C587F;
+	color: #505658;
+  background: #E0DFD5;
   text-align: center;
 }
 .title{
@@ -26,9 +26,10 @@ body {
 .outder{
 
     border: 5px;
-	border-color: rgba(41,128,185,1.00);
+	border-color: rgb(239, 100, 97);
     padding: 25px;
-	background: rgba(41,128,185,1.00);
+	background: rgb(239, 100, 97);
+	color:#E8E9EB;
     margin: 40px auto;
     border-radius: 8px;
     padding-top: 20px;
@@ -59,13 +60,13 @@ a {
 
 a.button {
     color: rgba(255,255,255, 0.7);
-	background:rgba(73,158,214,0.6);
-    box-shadow: rgba(41,128,185, 0.4) 0 0px 0px 3px inset;
+	background:rgba(255, 84, 83, 0.7);
+    box-shadow: rgba(255, 84, 83, 0.4) 0 0px 0px 3px inset;
 }
 
 a.button:hover {
     color: rgba(255, 255, 255, 0.85);
-    box-shadow: rgba(41,128,185, 0.7) 0 0px 0px 40px inset;
+    box-shadow: rgba(239, 100, 97, .7) 0 0px 0px 40px inset;
 }
 
 .big {
@@ -92,8 +93,8 @@ a.button:hover {
 }
 
 .custom-dropdown select {
-  background-color: #2980b9;
-  color: #fff;
+  background-color: #ef6461;
+  color: #E8E9EB;
   font-size: inherit;
   padding: .5em;
   padding-right: 2.5em;	
