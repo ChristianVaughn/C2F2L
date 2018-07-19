@@ -7,7 +7,7 @@
     "sizes": "256x256"
   }],
   "orientation": "landscape",
-  "start_url": "/",
+  "start_url": "/index.html",
 "display": "standalone",
 "related_applications": [{
     "platform": "web"
