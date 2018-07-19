@@ -5,7 +5,6 @@
 		<title>Cross To F2L</title>
 		<script TYPE="text/javascript" SRC="js.js.php?"></script>
 		<script TYPE="text/javascript" SRC="Scrambles.js"></script>
-		<script TYPE="text/javascript" SRC="ind.js"></script>
 	<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -45,6 +44,17 @@
 			<div class="outder">
 <div class="scramble" ID="Output" STYLE="font-family:Helvetica, Arial; font-size:30pt"></div>
 	</div>
-		<script  src="ind.js"></script>
+
 	</body>
+	<script>
+  if ('serviceWorker' in navigator) {
+    console.log("Will the service worker register?");
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function(reg){
+        console.log("Yes, it did.");
+      }).catch(function(err) {
+        console.log("No it didn't. This happened: ", err)
+      });
+  }
+</script>
 </html>
