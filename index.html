@@ -5,6 +5,9 @@
 		<title>Cross To F2L</title>
 		<script TYPE="text/javascript" SRC="js.js.php?"></script>
 		<script TYPE="text/javascript" SRC="Scrambles.js"></script>
+		<script src="ThemeSwitcher.js"></script>
+
+
 	<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -15,7 +18,7 @@
 		  ga('send', 'pageview');
 
 		</script>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link id="pagestyle" href="css/light.css" rel="stylesheet" type="text/css">
     <link rel="manifest" href="manifest.json">
     <meta name="application-name" content="C2F2L">
     <link rel="icon" type="image/png" href="favicon.png">
@@ -45,7 +48,11 @@
 				<div class="outder">
 	<div class="scramble" ID="Output" STYLE="font-family:Helvetica, Arial; font-size:30pt"></div>
 		</div>
-
+<button onclick="style0();" class="theme theme0"></button>
+<button onclick="style1();" class="theme"></button>
+<button onclick="style2();" class="theme theme2"></button>
+<button onclick="style3();" class="theme theme3"></button>
+<button onclick="style4();" class="theme theme4"></button>
 		</body>
 	<script>
   if ('serviceWorker' in navigator) {
@@ -58,4 +65,5 @@
       });
   }
 </script>
+
 </html>
