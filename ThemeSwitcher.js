@@ -1,4 +1,3 @@
-var islight = 1;
 var color = 'red'
 function swapStyleSheet() {
 	var theme = localStorage.getItem('theme');
@@ -11,8 +10,9 @@ function swapStyleSheet() {
 
 
 function style1() {
+	var islight = localStorage.getItem('islight');
 	color = 'red';
-	if(islight === 1) {
+	if(islight === 'light') {
 		localStorage.setItem('theme', 'css/light.css');
 		swapStyleSheet();
 	}
@@ -22,8 +22,9 @@ function style1() {
 	}
 }
 function style2() {
+	var islight = localStorage.getItem('islight');
 	color = 'orange';
-	if(islight === 1) {
+	if(islight === 'light') {
 		localStorage.setItem('theme', 'css/lightorange.css');
 		swapStyleSheet();
 	}
@@ -33,8 +34,9 @@ function style2() {
 	}
 }
 function style3() {
+	var islight = localStorage.getItem('islight');
 	color = 'green';
-	if(islight === 1) {
+	if(islight === 'light') {
 		localStorage.setItem('theme', 'css/lightgreen.css');
 		swapStyleSheet();
 	}
@@ -45,8 +47,9 @@ function style3() {
 }
 
 function style4() {
+	var islight = localStorage.getItem('islight');
 	color = 'blue';
-	if(islight === 1) {
+	if(islight === 'light') {
 		localStorage.setItem('theme', 'css/lightblue.css');
 		swapStyleSheet();
 		
@@ -57,8 +60,10 @@ function style4() {
 	}	
 }
 function style0(){
-	if(islight === 1) {
-		islight = 0;
+	var islight = localStorage.getItem('islight');
+	if(islight === 'light') {
+		localStorage.setItem('islight', 'dark');
+
 		if(color === "red") {
 			localStorage.setItem('theme', 'css/dark.css');
 			swapStyleSheet();
@@ -77,7 +82,7 @@ function style0(){
 		}
 	}
 	else {
-		islight = 1;
+		localStorage.setItem('islight', 'light');
 		if(color === "red") {
 			localStorage.setItem('theme', 'css/light.css');			
 			swapStyleSheet();
