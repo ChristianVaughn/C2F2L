@@ -1,92 +1,101 @@
 var islight = 1;
-var theme = "red";
-function swapStyleSheet(sheet) {
-    document.getElementById("pagestyle").setAttribute("href", sheet);  
+var color = 'red'
+function swapStyleSheet() {
+	var theme = localStorage.getItem('theme');
+	if (theme) {
+    	document.getElementById("pagestyle").setAttribute("href", theme);  
+		   // $('#theme').attr('href', theme);
+
+	}
 }
 
-/*function initate() {
-    var style1 = document.getElementById("style1");
-    var style2 = document.getElementById("style2");
 
-
-    style1.onclick = swapStyleSheet("style.css");
-    style2.onclick = swapStyleSheet("blue.css");
-
-}*/
 function style1() {
-	theme = "red";
-	if(islight == 1) {
-		swapStyleSheet("css/light.css");
+	color = 'red';
+	if(islight === 1) {
+		localStorage.setItem('theme', 'css/light.css');
+		swapStyleSheet();
 	}
 	else {
-		swapStyleSheet("css/dark.css");
+		localStorage.setItem('theme', 'css/dark.css');
+		swapStyleSheet();
 	}
 }
 function style2() {
-			theme = "orange";
+	color = 'orange';
 	if(islight === 1) {
-		swapStyleSheet("css/lightorange.css");
+		localStorage.setItem('theme', 'css/lightorange.css');
+		swapStyleSheet();
 	}
 	else {
-		swapStyleSheet("css/darkorange.css");
+		localStorage.setItem('theme', 'css/darkorange.css');
+		swapStyleSheet();
 	}
 }
 function style3() {
-	theme = "green";
-
+	color = 'green';
 	if(islight === 1) {
-		swapStyleSheet("css/lightgreen.css");
+		localStorage.setItem('theme', 'css/lightgreen.css');
+		swapStyleSheet();
 	}
 	else {
-		swapStyleSheet("css/darkgreen.css");
+		localStorage.setItem('theme', 'css/darkgreen.css');
+		swapStyleSheet();
 	}
 }
 
 function style4() {
-	theme = "blue";
-if(islight === 1) {
-		swapStyleSheet("css/lightblue.css");
+	color = 'blue';
+	if(islight === 1) {
+		localStorage.setItem('theme', 'css/lightblue.css');
+		swapStyleSheet();
 		
 	}
 	else {
-		swapStyleSheet("css/darkblue.css");
+		localStorage.setItem('theme', 'css/darkblue.css');
+		swapStyleSheet();
 	}	
 }
 function style0(){
 	if(islight === 1) {
-		if(theme === "red") {
-			swapStyleSheet("css/dark.css");
-			islight = 0;
+		islight = 0;
+		if(color === "red") {
+			localStorage.setItem('theme', 'css/dark.css');
+			swapStyleSheet();
 		}
-		else if(theme === "orange") {
-			swapStyleSheet("css/darkorange.css");
-			islight = 0;
+		else if(color === "orange") {
+			localStorage.setItem('theme', 'css/darkorange.css');
+			swapStyleSheet();
 		}
-		else if(theme === "green") {
-			swapStyleSheet("css/darkgreen.css");
-			islight = 0;
+		else if(color === "green") {
+			localStorage.setItem('theme', 'css/darkgreen.css');
+			swapStyleSheet();
 		}
-		else if(theme === "blue") {
-			swapStyleSheet("css/darkblue.css");
-			islight = 0;
+		else if(color === "blue") {
+			localStorage.setItem('theme', 'css/darkblue.css');
+			swapStyleSheet();
 		}
 	}
 	else {
-		if(theme === "red") {
-			swapStyleSheet("css/light.css");
-			islight = 1;
+		islight = 1;
+		if(color === "red") {
+			localStorage.setItem('theme', 'css/light.css');			
+			swapStyleSheet();
 		}
-		else if(theme === "orange") {
-			swapStyleSheet("css/lightorange.css");
-			islight = 1;
+		else if(color === "orange") {
+			localStorage.setItem('theme', 'css/lightorange.css');
+			swapStyleSheet();
 		}
-		else if(theme === "green") {
-			swapStyleSheet("css/lightgreen.css");
-			islight = 1;
+		else if(color === "green") {
+			localStorage.setItem('theme', 'css/lightgreen.css');
+			swapStyleSheet();
 		}
-		else if(theme === "blue") {
-			swapStyleSheet("css/lightblue.css");
-			islight = 1;
+		else if(color === "blue") {
+			localStorage.setItem('theme', 'css/lightblue.css');
+			swapStyleSheet();
 		}
 	}
 }
+document.addEventListener("DOMContentLoaded", function() {
+  swapStyleSheet();
+});
