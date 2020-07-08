@@ -1,64 +1,84 @@
+:root {
+    --bg-color: 236, 240, 241;
+    --logo-color: 107, 89, 109;
+    --accent-color: 170, 109, 163;
+}
 
 body {
-   font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 14px;
-	color: #505658;
-  background: #E0DFD5;
-  text-align: center;
+    color: rgb(var(--logo-color));
+    background: rgb(var(--bg-color));
+    text-align: center;
 }
 
-.theme {
-    background-color: #ef6461; /* Green */
-    border: none;
-    color: white;
-	width: 22px;
-	height: 22px;
-	margin: 5px;
+.input-color-container {
+    position: relative;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    border-color: #FFF;
+    border-style: solid;
+    border-width: 2px;
+    margin: 5px;
     display: inline-block;
 }
-.theme2 {
-    background-color: #f17300; /* Green */
-}
-.theme3 {
-    background-color: #7cb518; /* Green */
-}
-.theme4 {
-    background-color: #00a6fb; /* Green */
+
+.input-color {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 56px;
+    height: 56px;
+    border: none;
 }
 
-.title{
-	font-weight: bold;
-	font-size: 40px;
+.title {
+    font-weight: bold;
+    font-size: 40px;
 }
-.ritle{
-	font-weight: normal;
-	margin-top: -20px;
 
+.ritle {
+    font-weight: normal;
+    margin-top: -20px;
 }
 
 .wrap {
-   
     margin-top: -15px;
     margin-left: 0px;
     text-align: center;
 }
-.outder{
 
+.outder {
     border: 5px;
-	border-color: rgb(239, 100, 97);
+    border-color: rgb(var(--accent-color));
     padding: 25px;
-	background: rgb(239, 100, 97);
-	color:#E8E9EB;
+    background: rgb(var(--accent-color));
+    color: rgb(var(--bg-color));
     margin: 40px auto;
     border-radius: 8px;
     padding-top: 20px;
-	padding-bottom: 20px;
-	width: 70%;
+    padding-bottom: 20px;
+    width: 70%;
+}
 
-
-
-
+.settings {
+    border: 5px;
+    border-color: rgb(var(--bg-color));
+    padding: 25px;
+    background: rgb(var(--bg-color));
+    margin: 40px auto;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 25%;
+    z-index: 999;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 a {
@@ -73,98 +93,142 @@ a {
     text-decoration: none;
     border-radius: 8px;
     padding-top: 10px;
-	padding-left: 25px;
-	padding-bottom: 10px;
-	padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    padding-right: 25px;
 }
 
 a.button {
-    color: rgba(255,255,255, 0.7);
-	background:rgba(255, 84, 83, 0.7);
-    box-shadow: rgba(255, 84, 83, 0.4) 0 0px 0px 3px inset;
+    color: rgba(var(--bg-color), 0.8);
+    background: rgba(var(--accent-color), 0.7);
+    box-shadow: rgba(var(--accent-color), 0.4) 0 0px 0px 3px inset;
 }
 
 a.button:hover {
-    color: rgba(255, 255, 255, 0.85);
-    box-shadow: rgba(239, 100, 97, .7) 0 0px 0px 40px inset;
+    color: rgba(var(--bg-color), 0.95);
+    box-shadow: rgba(var(--accent-color), 0.7) 0 0px 0px 40px inset;
 }
 
 .big {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 .small {
-  font-size: .7em;
+    font-size: .7em;
 }
 
 .square {
-  width: .7em;
-  height: .7em;
-  margin: .5em;
-  display: inline-block;
+    width: .7em;
+    height: .7em;
+    margin: .5em;
+    display: inline-block;
 }
 
+
 /* Custom dropdown */
+
 .custom-dropdown {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 10px; /* demo only */
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+    /* demo only */
 }
 
 .custom-dropdown select {
-  background-color: #ef6461;
-  color: #E8E9EB;
-  font-size: inherit;
-  padding: .5em;
-  padding-right: 2.5em;	
-  border: 0;
-  margin: 0;
-  border-radius: 3px;
-  text-indent: 0.01px;
-  text-overflow: '';
-  /*Hiding the select arrow for firefox*/
-  -moz-appearance: none;
-  /*Hiding the select arrow for chrome*/
-  -webkit-appearance:none;
-  /*Hiding the select arrow default implementation*/
-  appearance: none;
+    background-color: rgb(var(--accent-color));
+    color: rgb(var(--bg-color));
+    font-size: inherit;
+    padding: .5em;
+    padding-right: 2.5em;
+    border: 0;
+    margin: 0;
+    border-radius: 3px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    /*Hiding the select arrow for firefox*/
+    -moz-appearance: none;
+    /*Hiding the select arrow for chrome*/
+    -webkit-appearance: none;
+    /*Hiding the select arrow default implementation*/
+    appearance: none;
 }
+
+
 /*Hiding the select arrow for IE10*/
+
 .custom-dropdown select::-ms-expand {
     display: none;
 }
 
 .custom-dropdown::before,
 .custom-dropdown::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
-
-.custom-dropdown::after { /*  Custom dropdown arrow */
-  content: "\25BC";
-  height: 1em;
-  font-size: .625em;
-  line-height: 1;
-  right: 1.2em;
-  top: 50%;
-  margin-top: -.5em;
-}
-
-.custom-dropdown::before { /*  Custom dropdown arrow cover */
-  width: 2em;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 0 3px 3px 0;
-  background-color: rgba(0,0,0,.2);
+    content: "";
+    position: absolute;
+    pointer-events: none;
 }
 
 .custom-dropdown::after {
-  color: rgba(0,0,0,.6);
+    /*  Custom dropdown arrow */
+    content: "\25BC";
+    height: 1em;
+    font-size: .625em;
+    line-height: 1;
+    right: 1.2em;
+    top: 50%;
+    margin-top: -.5em;
+}
+
+.custom-dropdown::before {
+    /*  Custom dropdown arrow cover */
+    width: 2em;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.custom-dropdown::after {
+    color: rgba(0, 0, 0, .6);
 }
 
 .custom-dropdown select[disabled] {
-  color: rgba(0,0,0,.25);
+    color: rgba(0, 0, 0, .25);
+}
+
+.icon {
+    position: absolute;
+    top: 0;
+    margin: 5px;
+    fill: rgb(var(--logo-color));
+}
+
+h3 {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.settingsWindow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.parentDisable {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.25;
+    z-index: 998;
+    height: 100%;
+    width: 100%;
 }
